@@ -1,11 +1,1 @@
-# Solicita 3 numeros
-numero1 = float(input("Introduce un número:\n"))
-numero2 = float(input("Introduce un número:\n"))
-numero3 = float(input("Introduce un número:\n"))
-
-# Suma los numeros ss
-
-
-# La suma de los numeros es
-
-print("La suma de los numeros es:",suma)
+print("La suma es:", float(input("Introduce el primer número: ")) + float(input("Introduce el segundo número: ")) + float(input("Introduce el tercer número: ")))

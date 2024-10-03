@@ -1,5 +1,5 @@
-# Operación ss
+# Definimos la operación
 resultado = (3 + 2 / 2 - 5) ** 2
 
-# Resultado de la operación por pantalla
+# Mostramos el resultado
 print("El resultado de la operación es:", resultado)

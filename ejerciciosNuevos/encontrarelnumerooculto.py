@@ -1,27 +1,40 @@
-#encontrar el numero oculto
-import java.util.Random;
-import java.util.Scanner;
+#encontrar el numero ocuto
 
-public class AdivinaElNumero {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        
-        int numeroOculto = random.nextInt(100) + 1; // Genera un número entre 1 y 100
-        int intentos = 10;
-        boolean adivinado = false;
+import random
 
-        System.out.println("¡Bienvenido al juego de Adivina el Número!");
-        System.out.println("He seleccionado un número entre 1 y 100.");
-        System.out.println("Tienes " + intentos + " intentos para adivinarlo.");
+def adivina_el_numero():
+    numero_oculto = random.randint(1, 100)  # Genera un número entre 1 y 100
+    intentos = 10
+    adivinado = False
 
-        while (intentos > 0 && !adivinado) {
-            System.out.print("Introduce tu suposición: ");
-            int suposicion = scanner.nextInt();
-            intentos--;
+    print("¡Bienvenido al juego de Adivina el Número!")
+    print("He seleccionado un número entre 1 y 100.")
+    print(f"Tienes {intentos} intentos para adivinarlo.")
 
-            if (suposicion == numeroOculto) {
-                adivinado = true;
-                System.out.println("¡Felicidades! Has adivinado el número.");
-            } else if (suposicion < numeroOculto) {
-                System.out.println("Demasiado bajo. Te quedan " + intentos + " intentos
+    while intentos > 0 and not adivinado:
+        try:
+            suposicion = int(input("Introduce tu suposición: "))
+
+            if suposicion < 1 or suposicion > 100:
+                print("Por favor, introduce un número entre 1 y 100.")
+                continue  # Volver a pedir entrada
+
+            intentos -= 1
+
+            if suposicion == numero_oculto:
+                adivinado = True
+                print("¡Felicidades! Has adivinado el número.")
+            elif suposicion < numero_oculto:
+                print(f"Demasiado bajo. Te quedan {intentos} intentos.")
+            else:
+                print(f"Demasiado alto. Te quedan {intentos} intentos.")
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+
+    if not adivinado:
+        print(f"Lo siento, no has adivinado el número. Era: {numero_oculto}")
+
+if __name__ == "__main__":
+    adivina_el_numero()
+
+

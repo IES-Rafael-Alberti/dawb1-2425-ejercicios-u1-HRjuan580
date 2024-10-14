@@ -4,7 +4,7 @@ import random
 
 def adivina_el_numero():
     numero_oculto = random.randint(1, 100)  # Genera un número entre 1 y 100
-    intentos = 10
+    intentos = 15
     adivinado = False
 
     print("¡Bienvenido al juego de Adivina el Número!")
@@ -23,11 +23,11 @@ def adivina_el_numero():
 
             if suposicion == numero_oculto:
                 adivinado = True
-                print("¡Felicidades! Has adivinado el número.")
+                print("¡Felicidades! Eres un mago .")
             elif suposicion < numero_oculto:
-                print(f"Demasiado bajo. Te quedan {intentos} intentos.")
+                print(f"Congelado. Te quedan {intentos} intentos.")
             else:
-                print(f"Demasiado alto. Te quedan {intentos} intentos.")
+                print(f"Ardiendo. Te quedan {intentos} intentos.")
         except ValueError:
             print("Por favor, introduce un número válido.")
 
@@ -36,5 +36,3 @@ def adivina_el_numero():
 
 if __name__ == "__main__":
     adivina_el_numero()
-
-

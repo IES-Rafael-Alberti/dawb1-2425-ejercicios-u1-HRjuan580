@@ -34,7 +34,7 @@ def main():
     else:
         print("Entrada valida")
 if cont > 0:
-   media = suma/
+   media = suma/                    
 
 
 

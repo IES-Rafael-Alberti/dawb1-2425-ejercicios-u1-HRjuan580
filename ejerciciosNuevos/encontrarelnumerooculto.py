@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #encontrar el numero ocuto
 
 import random
@@ -36,3 +37,7 @@ def adivina_el_numero():
 
 if __name__ == "__main__":
     adivina_el_numero()
+=======
+#encontrar el numero oculto
+ 
+>>>>>>> 99e691b3c575d3410bcac523c893285717514168

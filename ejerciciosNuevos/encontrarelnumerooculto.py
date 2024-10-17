@@ -26,9 +26,9 @@ def adivina_el_numero():
                 adivinado = True
                 print("¡Felicidades! Eres un mago .")
             elif suposicion < numero_oculto:
-                print(f"Congelado. Te quedan {intentos} intentos.")
+                print(f"Frio. Te quedan {intentos} intentos.")
             else:
-                print(f"Ardiendo. Te quedan {intentos} intentos.")
+                print(f"Caliente. Te quedan {intentos} intentos.")
         except ValueError:
             print("Por favor, introduce un número válido.")
 

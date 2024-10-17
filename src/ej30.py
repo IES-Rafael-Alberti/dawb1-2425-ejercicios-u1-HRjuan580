@@ -1,28 +1,31 @@
-def obtener_valores():
+
+def main():
+    
+    inicio = int(input("Ingrese el número de inicio: "))
+    
+
     while True:
         try:
-            inicio = int(input("Introduce el número de inicio: "))
-            incremento = int(input("Introduce el incremento (debe ser mayor que 0): "))
-            total = int(input("Introduce el total (debe ser mayor que 0): "))
+            incremento = int(input("Ingrese el incremento (mayor que 0): "))
+            total = int(input("Ingrese el total (mayor que 0): "))
             
             if incremento <= 0 or total <= 0:
-                print("Error: El incremento y el total deben ser mayores que cero. Inténtalo de nuevo.")
-                continue
-            
-            return inicio, incremento, total
+                print("Error: tanto el incremento como el total deben ser mayores que cero. Intente de nuevo.")
+            else:
+                break 
         except ValueError:
-            print("Error: Por favor, introduce números válidos.")
+            print("Error: por favor, ingrese números enteros válidos.")
 
-def generar_serie(inicio, incremento, total):
+    
     serie = []
     for i in range(inicio, total + 1, incremento):
         serie.append(str(i))
-    return serie
 
-def main():
-    inicio, incremento, total = obtener_valores()
-    serie = generar_serie(inicio, incremento, total)
-    print("SERIE => " + "..".join(serie))
+    
+    resultado = "SERIE => " + "..".join(serie[:-1]) + "-" + serie[-1]
+    
+    
+    print(resultado)
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,4 @@
+
 def main():
 
     nombre = input("Ingrese un nombre: ")
@@ -20,5 +21,6 @@ def main():
 
     print(f"Te llamas {nombre} y tienes {edad} años, te quedan aun {años_restantes} años por cumplir. ")
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     main()
+

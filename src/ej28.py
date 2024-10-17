@@ -1,3 +1,4 @@
+
 def main(): 
 
     num1 = int(input("Ingrese un numero entero: "))
@@ -12,7 +13,6 @@ def main():
         cantidad = mayor - menor -1
 
         print(f"El numero menor es el {menor} y entre ellos existen {cantidad} numeros enteros. ")
-
 
 if __name__ == "__main__":
     main()
